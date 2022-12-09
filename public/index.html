@@ -13,7 +13,9 @@
         src: url("fonts/Ubuntu-Regular.ttf");
       }
 
-      html, body {
+      html,
+      body {
+        cursor: none;
         height: 100%;
         width: 100%;
         padding: 0;
@@ -39,10 +41,11 @@
         font-family: "Amiri", serif;
       }
 
-      .main h1, .main h2 {
+      .main h1,
+      .main h2 {
         cursor: none;
       }
-      
+
       p1 {
         font-size: 0.4em;
         font-family: "Ubuntu", serif;
@@ -82,7 +85,7 @@
       <h1>Selâmün Aleyküm</h1>
       <h2>ٱلسَّلَامُ عَلَيْكُمْ</h2>
     </div>
-    <p1>© Provided by <a href="https://hbk.dev">HBK</a>.</p1>
+    <p1>© Provided by <a target="_blank" href="https://hbk.dev">HBK</a>.</p1>
   </body>
   <script>
     setTimeout(function () {
@@ -98,7 +101,6 @@
       setTimeout(function () {
         // Change the cursor with /images/Allah-100px.png
         document.body.style.cursor = "url('/images/Allah-100px.png'), auto";
-
       }, 500);
     }, 1000);
   </script>
