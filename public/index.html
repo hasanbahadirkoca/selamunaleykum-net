@@ -1,55 +1,105 @@
-<script>
-    setTimeout(function(){   
-        window.location.assign("https://aleykumselam.net");
-        }, 1000);
-</script>
-
+<!DOCTYPE html>
 <html>
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135505007-5"></script>
-            <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+  <head>
+    <title>Selamun Aleyküm</title>
+    <style>
+      @font-face {
+        font-family: "Amiri";
+        src: url("fonts/Amiri-Regular.ttf");
+      }
 
-                gtag('config', 'UA-135505007-5');
-            </script>
+      @font-face {
+        font-family: "Ubuntu";
+        src: url("fonts/Ubuntu-Regular.ttf");
+      }
 
+      html, body {
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        color: #000;
+        margin: 0;
+        text-align: center;
+      }
+      .main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: fadein 1.5s, fadeout 1.5s 1.5s;
+      }
+      .main h1 {
+        font-size: 4.5em;
+        font-family: "Ubuntu", serif;
+      }
+      .main h2 {
+        font-size: 2em;
+        font-family: "Amiri", serif;
+      }
 
-        <!-------------------------------------------------->
-        <title>SELÂMÜN ALEYKÜM</title>
-        <meta name="description" content="SELÂMÜN ALEYKÜM - ٱلسَّلَامُ عَلَيْكُمْ)">
-        <meta charset="UTF-8"/>
+      .main h1, .main h2 {
+        cursor: none;
+      }
+      
+      p1 {
+        font-size: 0.4em;
+        font-family: "Ubuntu", serif;
+        right: 10px;
+        bottom: 10px;
+        position: absolute;
+      }
 
-        <style>
-            body {
-                background-color: white;
-            }
-            h1 {
-                display: table-cell;
-                vertical-align: middle;
-                /*font-family: Helvetica, Arial, sans-serif;*/
-                font-size: 1000%;
-                text-align: center;
-                height: 50px;
-                color: black;
-            }
-            p {
-                font-size: 11px;
-                color: gray;
-            }
-            #footer { bottom: 5px; position: absolute; color: #999; font-family: Helvetica, Arial, sans-serif; font-size: 7px;}
-        </style>
-    </head>
-    <body>
-        <center>
-            <div>
-                <h1>SELÂMÜN ALEYKÜM</h1>
-            </div>
-        </center>
-        <div id="footer">
-            Made by <a href="https://hasanbahadirkoca.com" target="_blank">Hasan Bahadır Koca</a>
-        </div>
-    </body>
+      p1 a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeout {
+        from {
+          opacity: 1;
+        }
+
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Selâmün Aleyküm</h1>
+      <h2>ٱلسَّلَامُ عَلَيْكُمْ</h2>
+    </div>
+    <p1>© Provided by <a href="https://hbk.dev">HBK</a>.</p1>
+  </body>
+  <script>
+    setTimeout(function () {
+      // Hide the main div
+      document.querySelector(".main").style.display = "none";
+      // Redirect the page to the AleykumSelam.net
+      window.location.href = "https://aleykumselam.net";
+    }, 3000);
+
+    // Every 200ms, cursor style will be changed to "none" and "auto"
+    setInterval(function () {
+      document.body.style.cursor = "none";
+      setTimeout(function () {
+        // Change the cursor with /images/Allah-100px.png
+        document.body.style.cursor = "url('/images/Allah-100px.png'), auto";
+
+      }, 500);
+    }, 1000);
+  </script>
 </html>
